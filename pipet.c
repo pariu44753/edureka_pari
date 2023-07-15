@@ -1,4 +1,4 @@
-//Pipe communication1
+//Pipe communication12
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/types.h>
