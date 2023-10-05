@@ -1,0 +1,61 @@
+SELECT id, first_name, role, manager_id, level
+FROM employee
+START WITH id = 1
+CONNECT BY PRIOR id = manager_id
+ORDER BY level ASC;
+
+10.123.80.65 - Admin [11:10:15] "GET /sony-Inverter-IN8009/index.html HTTP/1.0" 200 2048
+
+sony-Inverter-IN8009
+
+
+10.123.80.65 - Admin [11:10:15] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0" 206
+10.123.80.65 - User1 [11:10:15] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0" 200 1024
+10.123.80.65 - User2 [11:10:15] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0" 302
+10.123.80.65 - User1 [11:10:15] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0" 304
+10.123.80.65 - User2 [11:10:15] "GET /sony-Laptop-Lap8009/index.html HTTP/1.0" 403
+10.123.80.65 - User3 [11:10:15] "GET /sony-Inverter-IN8009/index.html HTTP/1.0" 304
+10.123.80.65 - User4 [11:10:15] "GET /sony-Inverter-IN8009/index.html HTTP/1.0" 404
+10.123.80.65 - User5 [11:10:15] "GET /sony-Inverter-IN8009/index.html HTTP/1.0" 200 512
+10.123.80.65 - User5 [11:10:15] "GET /sony-Inverter-IN8009/index.html HTTP/1.0" 200 4096
+10.123.80.65 - User4 [11:10:15] "GET /sony-Inverter-IN8009/index.html HTTP/1.0" 403
+10.123.80.65 - Admin [11:10:15] "GET /sony-Inverter-IN8009/index.html HTTP/1.0" 304
+12.123.80.60 - Admin [11:10:15] "GET /sony-Inverter-IN8009/index.html HTTP/1.0" 200 2048
+12.123.80.60 - Admin [11:10:15] "GET /sony-Inverter-IN8009/index.html HTTP/1.0" 200 1024
+12.123.80.60 - Admin [11:10:15] "GET /sony-laptop-Lap789/index.html HTTP/1.0" 200 1024
+
+10.123.80.65 Admin
+
+cut -d '-' -f1,2 access.log | cut -d ' ' -f1,3
+
+
+cut -d ' ' -f6 bathwal |cut -d '/' -f2 |cut -d '-' -f1 |sort -r |uniq -c
+
+C1000 Anil 100001 SB
+C1001 Vijaya 100002 SB
+C1001 Vijaya 200001 FD
+C1002 Gaythri 100003 SB
+C1000 Anil 200001 FD
+
+Extract the fields "CustomerID" and "CustomerName" from "Sample.txt" file and store them in another file "custInfo"
+Extract "CustomerName", "AccountType" fields and store them in another file called "ActInfo"
+Concatenate the two files "CustInfo" and "ActInfo’ and store the results into another file called "temp1"
+
+
+
+
+cut -d ' ' -f2,1 exam > custInfo
+
+grep -A 99  Bathwal | grep -B 99 |grep 'samsung'
+
+grep '200' Bathwal | grep -iE "mobile|Laptop" 
+
+LoginID#Passwd#DateOfBirth#Location#Mobile#Email
+
+Rajaravi#ETA@123#18-09-1993#Delhi#8888888888#raja.ravi@infosys.com
+Rajesh#Infy123#16-08-1990#Chennai#9999999999#Rajesh@infosys.com
+Raktim#123Infy#10-08-1992#Bangalore#8989898998#Raktim_talukdar@infosys.com;
+Aravind#Dell123#12-08-1993#Hyderabad#7878787890#Aravind.raghavan@infosys.com
+Sankavi#InfyDell#14-09-1992#Mumbai#7777777777#vidya@infosys.com
+
+ls -l | grep ^d | wc -l 

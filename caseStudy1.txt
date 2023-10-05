@@ -1,0 +1,60 @@
+/* create user Jane1 and set password from root
+pbathwal@pbathwal-VM1:/$ sudo -i
+root@pbathwal-VM1:~# useradd -m -s /bin/bash Jane1
+root@pbathwal-VM1:~# passwd Jane1
+New password: 
+Retype new password: 
+passwd: password updated successfully
+*/
+
+/*create user Tom2 and set password from root
+root@pbathwal-VM1:~# useradd -m -s /bin/bash Tom2
+root@pbathwal-VM1:~# passwd Tom2
+New password: 
+Retype new password: 
+passwd: password updated successfully
+*/
+
+/* Create groups and add users Jane, Tom and others to group */
+groupadd project1
+groupadd common
+
+sudo usermod -a -G project1 Jane1
+sudo usermod -a -G project1 Tom2
+
+Jane1@pbathwal-VM1:/home$ sudo usermod -a -G common Jane1
+Jane1@pbathwal-VM1:/home$ sudo usermod -a -G common Tom2
+Jane1@pbathwal-VM1:/home$ sudo usermod -a -G common pbathwal
+/* Create groups and add users Jane, Tom and others to group */
+
+/* Create the directories and folders and provide persmissions */
+
+pbathwal@pbathwal-VM1:/home$ sudo mkdir research 
+pbathwal@pbathwal-VM1:/home$ sudo mkdir notes
+
+drwxr-xr-x  3 root     root     4096 Jun  6 15:59 research
+drwxrwxr--  2 root     common   4096 Jun  6 13:27 notes
+drwxr-x---  2 Tom2     Tom2     4096 Jun  5 13:41 Tom2
+drwxr-x---  2 Jane1    Jane1    4096 Jun  5 11:41 Jane1
+drwsrwsr-x  2 root     project1 4096 Jun  5 09:43 sharedfoler
+drwxr-x--- 16 pbathwal pbathwal 4096 Jun  4 20:35 pbathwal
+
+Tom2@pbathwal-VM1:/home$ cd Jane1/home
+bash: cd: Jane1/home: Permission denied
+Tom2@pbathwal-VM1:/home$ 
+
+groupadd project1
+groupadd common
+
+sudo usermod -a -G project1 Jane1
+sudo usermod -a -G project1 Tom2
+
+Jane1@pbathwal-VM1:/home$ sudo usermod -a -G common Jane1
+Jane1@pbathwal-VM1:/home$ sudo usermod -a -G common Tom2
+Jane1@pbathwal-VM1:/home$ sudo usermod -a -G common pbathwal
+
+
+root@pbathwal-VM1:/home/research# chmod 700 F1
+root@pbathwal-VM1:/home/research# chmod 700 F2
+
+/* Create the directories and folders and provide persmissions */

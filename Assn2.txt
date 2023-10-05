@@ -1,0 +1,51 @@
+========================================
+•Jane wants to upgrade the version of python to python3. Check and upgrade the python version.
+
+check version-- 
+python3 --version
+
+To check which versions are available for install/download.
+apt list | grep python
+
+install latest python version(3.11)
+sudo apt install python3.11
+
+Add the python version to alternatives:
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 2
+
+set the default version.
+
+sudo update-alternatives --config python3
+
+Confirm the version:
+python3 --version
+========================================
+
+•Jane and Tom want mysql to be installed on their system. 
+
+For Jane(Ubuntu)
+
+check mysql installed and version:
+mysql --version
+
+Install mysql:
+sudo apt install mysql-server
+
+sudo systemctl start mysql.service
+
+
+========================================
+
+•Remove python for Tom as he won’t be using it.
+
+sudo yum remove python2
+
+========================================
+•Install java with tar.gz available. Please guide them, how to build them using simple commands like (1)./configure (2) make and (3) make install. 
+
+sudo yum install java
+Java -version
+sudo yum install java-devel
+========================================

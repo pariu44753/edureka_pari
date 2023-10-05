@@ -1,0 +1,137 @@
+AWS Connection:
+ssh -i "ubuntu_pari_AWS.pem" ubuntu@ec2-16-171-15-70.eu-north-1.compute.amazonaws.com
+ 
+ --------- Notes --------- Notes --------- Notes --------- Notes --------- 
+
+git --version
+git init
+
+git config --global user.email
+git config --global user.name
+
+git config --global --list => To show email/user details
+git config --global --edit => To edit email/user details
+
+git add
+git commit -m 'comments'
+git status
+git log
+git log --oneline
+git show <commit ID> 
+git diff commitID1 commitID2
+git commit -a -m "comments" ==> To move the staged changes directly to git.
+
+git ls-files
+.gitignore (spelling sensitive) => This files helps to track the file types that needs to be ignored from tracking changes. 
+								   They will directly be moved to commit area of git.
+gitignore file needs to be committed.
+git tag -a v1.0 commitID -m 'message'  
+			=> Tag this commit to make it a functional version of the code.
+		    => All git commands with commit id can be used with version no also.
+git add . => track all files from the untracked area.
+git show version no -> will give details of user who tagged the version if defined using git config
+git remote -v  => to get the repo and alias details
+
+git branch -M main
+git push -u <remote repo name> <branch name>
+git branch <branch name> => To create a branch.
+git checkout branchname => to switch branch.
+git checkout -b <branch name> => To create branch and switch to it
+git checkout -b <branch name> <commit_ID> => To create branch and switch to it with this commit ID.
+git clone -> To clone the code from remote to local 
+git pull -> Only brings changes from remote to local
+git fetch -> To fetch any code difference in remote and local.
+git merge -> to merge the changes downloaded using fetch
+git branch -d branchname
+git fetch + git merge => To check if any changes, then merge if required.
+git stash -> To save the changes in local workspace temporarily 
+git stash list  -> To list the data saved in the stash
+git stash pop -> to bring back the changes to the workspace and staging area
+
+git push -d origin branchname - to delete the remote branch from local
+
+git rebase -i commitID -> To change the commit message of this commit ID.
+
+squashing in git: to merge 2 or more commit id into one
+
+git branch  -> To know the local branch name
+git branch -r -> To know the remote branch name
+git branch -m branchname -> To rename the current branch
+
+git pull vs git fetch => when no changes done in local, the git pull works well. If changes is done in local and remote, then git fetch + git merge.
+git rm filename1 filename2
+git commit -m 'msg'
+
+git reset --hard => It removes the mentioned commitID from the workspace.
+
+get token for authentication for git push to remote => from developer settings - token in remote repo.
+
+Head/main -> latest commitID on local main branch
+origin/main -> main branch on remote repository
+origin/head -> latest commitID on remote repo
+
+git revert commitID -> revert this commitID but keep the reverted commitID details intact. The reversion happens with a new commitID
+
+Notes:
+1- When we have changes in local also and remote also, then we do a git fetch and check the differences, in case of major conflict, we create a new branch.
+
+deleting a file:
+
+1st way:
+rm F1 F2 => git add => git commit -m "msg"
+
+2nd way:
+git rm F1 F2 => git commit -m "msg"
+
+GitFlow concepts:
+
+apt install git-flow
+Git flow init ==> plugin command in git to implement gitflow branching concept in git
+
+git flow feature start feature_branchname -> will create and switch to subbranch of feature.
+git flow feature finish audio -> will merge the changes to development and remove the branch.
+ 
+ --------- Notes End --------- Notes End --------- Notes End --------- Notes End --------- 
+
+ --------- work --------- work --------- work --------- work --------- 
+ 
+edureka_pari => git repo name
+edureka_pari => token name
+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
+Token for git
+New token classic:
+token name : edureka_pari_token
+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
+
+Saw this message: this means code is getting saved in server? 
+This repository's code is being indexed right now. Try again in a few minutes.
+
+repo:pariu44753/edureka_pari /token
+
+git push -u <remote report name> <branch name>
+git push -u  	 main
+
+git clone https://github.com/pariu44753/edureka_pari.git main
+
+app.diagrams.test
+
+ --------- work End--------- work End --------- work End --------- work End --------- 
+
+ --------- Questions--------- Questions --------- Questions --------- Questions --------- 
+
+
+Can you explain head in terms of git and also tell the number of heads that can be present in a repository?
+A head is nothing but a reference to the last commit object of a branch.
+For every repository, there will always be a default head referred to as “master” or now “main” (as per GitHub) but there is no restriction to the count of heads available. In other words, it can have any number of heads.
+Usages:
+
+- To go or checkout to 1 commit before the latest commit, we use git checkout HEAD~1
+
+- To uncommit the last 3 commits without losing the changes, we first run git reset HEAD~3. Then we can see the changes made in the last 3 commits and then update it manually and commit it finally.
+
+- In order to uncommit the last 3 commits and also remove the changes, we can run the command: git reset --hard HEAD~3. This command will completely remove all the changes.
+
+- To look into the changes made in the last 3 commits, we can run git diff HEAD~3
+
+- To make a new commit by reverting the last 3 commits, we can run the command: git revert --no-commit HEAD~3...HEAD
+

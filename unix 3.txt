@@ -1,0 +1,38 @@
+bathwal16@ubuntu-test1:~/program$ git log --oneline
+c380ba6 (HEAD -> main, tag: v1.0, origin/main) added  git ignore file
+e031825 pipet file changed to include description
+bathwal16@ubuntu-test1:~/program$ 
+bathwal16@ubuntu-test1:~/program$ 
+bathwal16@ubuntu-test1:~/program$ 
+bathwal16@ubuntu-test1:~/program$ 
+
+
+ 1 file changed, 1 insertion(+)
+root@ip-172-31-44-21:/home/Tom/project/main# git log --oneline
+c51727f (HEAD -> main, origin/main, origin/HEAD) Added program description to pipet.c
+c380ba6 added  git ignore file
+e031825 pipet file changed to include description
+root@ip-172-31-44-21:/home/Tom/project/main# 
+root@ip-172-31-44-21:/home/Tom/project/main# 
+
+
+Head/main -> latest commitID on local main branch
+origin/main -> main branch on remote repository
+origin/head -> latest commitID on remote repo
+
+c380ba6 (HEAD -> main, tag: v1.0, origin/main) added  git ignore file
+
+
+bathwal16@ubuntu-test1:~/program$ git fetch origin main
+From https://github.com/pariu44753/edureka_pari
+ * branch            main       -> FETCH_HEAD
+ 
+ bathwal16@ubuntu-test1:~/program$ git fetch origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 723 bytes | 144.00 KiB/s, done.
+From https://github.com/pariu44753/edureka_pari
+ * branch            main       -> FETCH_HEAD
+   c380ba6..c51727f  main       -> origin/main

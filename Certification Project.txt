@@ -1,0 +1,55 @@
+Certification Project
+
+ProjectProblem Statement
+
+DOMAIN: LinuxFundamentals
+Focus: Development
+
+Tom needs to createuser accounts for new joinersJane and Jack in his system and give them permission to view and edit common repositories.
+He needs to create a cronjob to delete empty files and directory every day at 00:00 am and need to upgrade the system every week on Tuesday 6:00 am.
+As part of his role he also needs to monitor system usage (CPU load, Memory usage, disk usage, network usage, active logged in users). 
+He needs to install Git as SCM in a remote system and put system usage data there. 
+He would need to fetch the data on remote server and needs to maintain the remote server from his desktop as well. 
+He also needs to restrict users to access youtube fromthis machine.
+
+Approach to Solve:
+
+1.Tom creates user accounts for Jane and Jack in his system.
+2.Separate home directories are created for each of the three users. 
+3.They have a common repository script where every user has access to view and edit files.
+4.Tom installed git as the SCM in a remote system.
+5.He set a cron job to delete empty files and directory from /tmp folder at 00:00 am.
+6.He set a cron job to upgrade the system every week on Tuesday6:00 am.
+7.Tom creates a script which has functionalities to displayCPU load, Memory usage, disk usage, network usage, active logged in users.
+8.He puts them in git repository. 
+9.He runs the scripts to get data for remote server to check and maintain the remote server from his desktop.
+10.He restricts users to access youtube from this machine.
+
+  'CM_STORERESULT',
+  'CUSTDATA_ADDRESS',
+  'CUSTDATA_COMPANY',
+  'CUSTDATA_SALES',
+  'CUST_DATA',
+  'GMACC_CM_DATA',
+  'REF_DATA',
+
+Your profile summary should mention the highlights of your career and education, what your professional interests are, 
+and what kind of a career you are looking for. Write a meaningful summary of more than 50 characters.
+
+Objective is to do challenging job assignments ensuring career growth and enhancement of my professional / inter-personal 
+skills in the organisation that provides a healthy and balanced work environment, resulting in complete growth of myself 
+as an individual and the organisation at large.
+
+I have performed excellently well in production support, supporting a very unstable, complex business application for a leading electronics retail company of US.
+Currently I am working as a technical lead, where I am assisting my team of about 8 members to continuously up-skill and be at par with the requirements of the client.
+In the near future, my aspiration to work on further challenging environment and get exposure to more complex business to add more depth to my carrier.
+For the long term, I am looking myself to be at a senior management level with a very good history in technical aspect.
+
+If you are interested kindly share me your CV to usha.sundar@adecco.com & below details
+1) Present CTC (Fixed + VP) - 9.4 LPA
+2) Expected CTC - 22 LPA
+3) No. of years experience - 8.2 Years
+4) Notice Period - 3 months
+5) Offer-in hand - 18 LPA
+6) Reason of Change - Enhancing the carrier
+7) Present Location - Mangalore
